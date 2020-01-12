@@ -1,7 +1,6 @@
 #pragma once
 #ifndef PCAP_STAT_H
 #define PCAP_STAT_H
-#define ETYPE 0x0608
 
 
 #include <iostream>
