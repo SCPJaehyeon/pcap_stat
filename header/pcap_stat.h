@@ -14,7 +14,10 @@
 struct epetherh {
     u_char MAC[6];
     bool operator<(const epetherh& omac) const{
-        return MAC[5] < omac.MAC[5];
+        if(this->MAC[0]+this->MAC[1]+this->MAC[2]+this->MAC[3]+this->MAC[4]+this->MAC[5] < omac.MAC[0]+omac.MAC[1]+omac.MAC[2]+omac.MAC[3]+omac.MAC[4]+omac.MAC[5]){
+            return true;
+        }
+        return false;
     }
 };
 
@@ -23,7 +26,11 @@ struct conetherh {
     u_char MACa[6];
     u_char MACb[6];
     bool operator<(const conetherh& omac) const{
-        return MACa[5] < omac.MACa[5];
+        if(this->MACb[0]+this->MACb[1]+this->MACb[2]+this->MACa[3]+this->MACa[4]+this->MACa[5] < omac.MACb[0]+omac.MACb[1]+omac.MACb[2]+omac.MACa[3]+omac.MACa[4]+omac.MACa[5]){
+            return true;
+        }
+
+        return false;
     }
 };
 
