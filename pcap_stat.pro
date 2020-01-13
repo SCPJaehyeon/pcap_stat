@@ -6,7 +6,9 @@ LIBS += -lpcap
 
 SOURCES += \
         main.cpp \
-        pcap_stat.cpp
+        pcap_constat.cpp \
+        pcap_epstat.cpp \
+        show.cpp
 
 HEADERS += \
     pcap_stat.h
