@@ -5,10 +5,10 @@ CONFIG -= qt
 LIBS += -lpcap
 
 SOURCES += \
-        main.cpp \
-        pcap_constat.cpp \
-        pcap_epstat.cpp \
-        show.cpp
+        cpp\main.cpp \
+        cpp\pcap_constat.cpp \
+        cpp\pcap_epstat.cpp \
+        cpp\show.cpp
 
 HEADERS += \
-    pcap_stat.h
+    header\pcap_stat.h
